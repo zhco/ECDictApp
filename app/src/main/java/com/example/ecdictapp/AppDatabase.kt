@@ -25,7 +25,6 @@ class AppDatabase private constructor(context: Context) : SQLiteOpenHelper(
 
         dbFile.parentFile?.mkdirs()
 
-        // Try to copy from assets
         try {
             context.assets.open("databases/$DB_NAME").use { input ->
                 FileOutputStream(dbFile).use { output ->
@@ -33,7 +32,7 @@ class AppDatabase private constructor(context: Context) : SQLiteOpenHelper(
                 }
             }
         } catch (_: Exception) {
-            // No prebuilt database in assets, will create empty
+            // No prebuilt database in assets
         }
     }
 
@@ -61,7 +60,6 @@ class AppDatabase private constructor(context: Context) : SQLiteOpenHelper(
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-        // No migration needed for v1
     }
 
     companion object {

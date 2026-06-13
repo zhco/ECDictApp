@@ -1,0 +1,10 @@
+/workspace/ECDictApp/app/src/main/java/com/example/ecdictapp/ui/components/WordDetailCard.kt
+/workspace/ECDictApp/app/src/main/java/com/example/ecdictapp/SearchResult.kt
+/workspace/ECDictApp/app/src/main/java/com/example/ecdictapp/ui/theme/Theme.kt
+/workspace/ECDictApp/app/src/main/java/com/example/ecdictapp/MainActivity.kt
+/workspace/ECDictApp/app/src/main/java/com/example/ecdictapp/DictRepository.kt
+/workspace/ECDictApp/app/src/main/java/com/example/ecdictapp/DictEntry.kt
+/workspace/ECDictApp/app/src/main/java/com/example/ecdictapp/AppDatabase.kt
+/workspace/ECDictApp/app/src/main/java/com/example/ecdictapp/DictDao.kt
+/workspace/ECDictApp/app/src/main/java/com/example/ecdictapp/ui/components/SearchBar.kt
+/workspace/ECDictApp/app/src/main/java/com/example/ecdictapp/DictViewModel.kt
