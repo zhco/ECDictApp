@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
 
     private val database by lazy { AppDatabase.getDatabase(this) }
     private val viewModel: DictViewModel by viewModels {
-        DictViewModel.Factory(DictRepository(database.dictDao()))
+        DictViewModel.Factory(DictRepository(database.dao))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

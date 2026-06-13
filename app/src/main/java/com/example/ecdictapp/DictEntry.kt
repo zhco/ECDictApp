@@ -1,11 +1,7 @@
 package com.example.ecdictapp
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-
-@Entity(tableName = "dictionary")
 data class DictEntry(
-    @PrimaryKey val word: String,
+    val word: String,
     val phonetic: String = "",
     val definition: String = "",
     val translation: String = "",
