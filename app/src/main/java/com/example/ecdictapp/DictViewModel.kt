@@ -8,12 +8,13 @@ import kotlinx.coroutines.flow.*
 
 class DictViewModel(private val repository: DictRepository) : ViewModel() {
 
-    private val searchQuery = MutableStateFlow("")
+    private val _searchQuery = MutableStateFlow("")
+    val searchQuery: StateFlow<String> = _searchQuery.asStateFlow()
     private val searchDebounce = MutableStateFlow("")
 
     init {
         viewModelScope.launch {
-            searchQuery
+            _searchQuery
                 .debounce(300)
                 .distinctUntilChanged()
                 .collect { searchDebounce.value = it }
@@ -46,7 +47,7 @@ class DictViewModel(private val repository: DictRepository) : ViewModel() {
         .stateIn(viewModelScope, SharingStarted.Lazily, null)
 
     fun onSearchQueryChange(query: String) {
-        searchQuery.value = query
+        _searchQuery.value = query
     }
 
     fun onWordSelected(word: String) {
@@ -55,7 +56,7 @@ class DictViewModel(private val repository: DictRepository) : ViewModel() {
 
     fun clearSelection() {
         _selectedWord.value = null
-        searchQuery.value = ""
+        _searchQuery.value = ""
     }
 
     class Factory(private val repository: DictRepository) : ViewModelProvider.Factory {

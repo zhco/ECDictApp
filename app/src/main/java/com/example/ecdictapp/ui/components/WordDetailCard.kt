@@ -117,6 +117,7 @@ private fun PosChips(pos: String) {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun TagChips(tag: String) {
     val tagList = tag.split(" ").filter { it.isNotBlank() }

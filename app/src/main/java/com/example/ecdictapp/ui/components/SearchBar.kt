@@ -87,7 +87,7 @@ private fun SuggestionItem(
                 maxLines = 1
             )
         }
-        HorizontalDivider(
+        Divider(
             modifier = Modifier.padding(top = 8.dp),
             thickness = 0.5.dp,
             color = MaterialTheme.colorScheme.outlineVariant
